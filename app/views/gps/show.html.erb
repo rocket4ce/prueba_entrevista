@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @gp.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @gp.longitude %>
+</p>
+
+<p>
+  <strong>Sent at:</strong>
+  <%= @gp.sent_at %>
+</p>
+
+<p>
+  <strong>Vehicle identifier:</strong>
+  <%= @gp.vehicle_identifier %>
+</p>
+
+<%= link_to 'Edit', edit_gp_path(@gp) %> |
+<%= link_to 'Back', gps_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Sent at</th>
+      <th>Vehicle identifier</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gps.each do |gp| %>
+      <tr>
+        <td><%= gp.latitude %></td>
+        <td><%= gp.longitude %></td>
+        <td><%= gp.sent_at %></td>
+        <td><%= gp.vehicle_identifier %></td>
+        <td><%= link_to 'Show', gp %></td>
+        <td><%= link_to 'Edit', edit_gp_path(gp) %></td>
+        <td><%= link_to 'Destroy', gp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gp', new_gp_path %>
